@@ -3,10 +3,11 @@ from abc import ABC, abstractmethod
 class Pieces(ABC):
 
     @abstractmethod
-    def __init__(self, color='None', type='None', mouvement=[]):
+    def __init__(self, color='None', type='None', nb=0, mouvement={'basic':[], 'first':[]}):
         self._color = color
-        self._type = type
         self._mouvement = mouvement
+        self.nb = nb
+        self.type = type
 
     def getColor(self):
         return(self._color)
@@ -15,10 +16,10 @@ class Pieces(ABC):
         self._color = value
 
     def getType(self):
-        return(self._type)
+        return(self.type)
 
     def setType(self,value):
-        self._type = value
+        self.type = value
 
     def getMouv(self):
         return(self._mouvement)

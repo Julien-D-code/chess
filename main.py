@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import chess_package.objects.plateau.board as bd
+import chess_package.objects.board.board as bd
 
 def main():
     pl = bd.Board()
