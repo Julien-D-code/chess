@@ -15,14 +15,20 @@ class Pieces(ABC):
     def setColor(self,value):
         self._color = value
 
-    def getType(self):
-        return(self.type)
-
-    def setType(self,value):
-        self.type = value
-
     def getMouv(self):
         return(self._mouvement)
 
     def setMouv(self, value):
         return(self._mouvement)
+
+    def getNb(self):
+        return(self.nb)
+
+    def addNb(self):
+        self.nb += 1
+
+    def getType(self):
+        return(self.type)
+
+    def setType(self,value):
+        self.type = value
