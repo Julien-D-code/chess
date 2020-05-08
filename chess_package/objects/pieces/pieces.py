@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Pieces(ABC):
-
+# Commentaire test
     @abstractmethod
     def __init__(self, color='None', type='None', nb=0, mouvement={'basic':[], 'first':[]}):
         self._color = color
