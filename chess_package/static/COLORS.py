@@ -1,6 +1,11 @@
-from enum import Enum
+from enum import Enum, auto
 
-class Colors(Enum):
+class AutoName(Enum):
 
-    BLACK_COLOR = "black"
-    WHITE_COLOR = "white"
+    def _generate_next_value_(name, start, count, last_values):
+        return name
+
+class Labels_Colors(AutoName):
+
+    BLACK = auto()
+    WHITE = auto()
