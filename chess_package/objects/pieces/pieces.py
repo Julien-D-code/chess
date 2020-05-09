@@ -2,13 +2,14 @@ from abc import ABC, abstractmethod
 from ...services.impl_mouv_init.impl_mouv_init import impl_mouv
 
 class Pieces(ABC):
-# Commentaire test
+
     @abstractmethod
-    def __init__(self, color='None', type='None', nb=0, mouvement=None):
+    def __init__(self, color='None', type='None', special=False, nb=0, mouvement=None):
         self._color = color
         self._type = type
         self._mouvement = self.setMouv(self)
         self.nb = nb
+        self.special = special
 
     def getColor(self):
         return(self._color)
@@ -23,12 +24,7 @@ class Pieces(ABC):
         self._type = value
 
     def getMouv(self):
-        # TO FUNCTION
-        # if n == 0:
-        #     mouv = self._mouvement['basic'].extend(self._mouvement['first'])
-        # else:
-        #     mouv = self._mouvement['basic']
-        return(self._mouvement)
+        return(self._mouvement['init'])
 
     def setMouv(self, value):
         mouv = impl_mouv(self)
@@ -39,3 +35,9 @@ class Pieces(ABC):
 
     def addNb(self):
         self.nb += 1
+
+    def iSpecial(self):
+        return(self.special)
+
+    def setSpecial(self,value):
+        self.special = value

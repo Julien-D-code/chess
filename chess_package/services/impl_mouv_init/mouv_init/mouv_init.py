@@ -4,12 +4,12 @@
 # With special move init for pawn and king#
 ###########################################
 def pawn(mult):
-    mouv = {'init':[[0,mult*1]], 'passing':[mult*1,mult*1]}
+    mouv = {'init':[[0,mult*1]], 'special':[[mult*1,mult*1], [mult*(-1),mult*1]]}
     return mouv
 
 def king(mult):
     mouv = {'init':[[1,1],[1,-1],[-1,1],[-1,-1],[0,1],[1,0],[0,-1],[-1,0]],\
-    'roc_h':[2,0], 'roc_a':[0,2]}
+    'special':[[2,0], [0,2]]}
     return mouv
 ###########################################
 ###########################################
@@ -19,10 +19,6 @@ def king(mult):
 ###########################################
 def knight(mult):
     mouv = {'init':[[1,2],[1,-2],[-1,2],[-1,-2],[2,1],[2,-1],[-2,1],[-2,-1]]}
-    return mouv
-
-def bishop(mult):
-    mouv = {'init':[['x','x']]}
     return mouv
 ###########################################
 ###########################################
@@ -34,8 +30,12 @@ def queen(mult):
     mouv = {'init':[['x','x'],['x','y']]}
     return mouv
 
-def tower(piece, mult):
+def tower(mult):
     mouv = {'init':[['x','y']]}
+    return mouv
+
+def bishop(mult):
+    mouv = {'init':[['x','x']]}
     return mouv
 ###########################################
 ###########################################

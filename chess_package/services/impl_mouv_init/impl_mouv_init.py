@@ -34,11 +34,11 @@ def impl_mouv(piece):
 
     switch = {
         Labels_Pieces.BISHOP:bishop(mult),
-        Labels_Pieces.KING:bishop(mult),
-        Labels_Pieces.KNIGHT:bishop(mult),
-        Labels_Pieces.PAWN:bishop(mult),
-        Labels_Pieces.QUEEN:bishop(mult),
-        Labels_Pieces.TOWER:bishop(mult)
+        Labels_Pieces.KING:king(mult),
+        Labels_Pieces.KNIGHT:knight(mult),
+        Labels_Pieces.PAWN:pawn(mult),
+        Labels_Pieces.QUEEN:queen(mult),
+        Labels_Pieces.TOWER:tower(mult)
     }
 
     # Get key from dic

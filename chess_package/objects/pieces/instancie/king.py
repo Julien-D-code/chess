@@ -2,9 +2,8 @@ from ..pieces import *
 
 class King(Pieces):
 
-    def __init__(self, color='None', type='None'):
-        super().__init__(color, type)
-        self._special_move = []
+    def __init__(self, color='None', type='None', special=True):
+        super().__init__(color, type, special)
 
     def getSpecMouve(self):
-        return(self._special_move)
+        return(self._mouvement['special'])
