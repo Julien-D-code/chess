@@ -7,3 +7,6 @@ class Board():
 
     def getBoard(self):
         return(self.board)
+
+    def setBoard(self, board):
+        self.board = board
