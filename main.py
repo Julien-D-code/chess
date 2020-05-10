@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import chess_package.objects.board.board as bd
-from chess_package.objects.board.instancie.square import *
 from pprint import pprint
 
 def main():
